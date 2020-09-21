@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://UI/EnemyHealthUI.gd" type="Script" id=1]
+[ext_resource path="res://UI/HeartUIFull.png" type="Texture" id=2]
+[ext_resource path="res://UI/HeartUIEmpty.png" type="Texture" id=3]
+[ext_resource path="res://Textures/UI/LifeBars.png" type="Texture" id=4]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 4 )
+region = Rect2( 762.679, 713.698, 570.633, 82.6135 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 4 )
+region = Rect2( 762.767, 593.771, 570.478, 82.5654 )
+
+[node name="EnemyHealthUI" type="Control"]
+margin_right = 86.0
+margin_bottom = 14.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HeartUIEmpty" type="TextureRect" parent="."]
+visible = false
+margin_right = 60.0
+margin_bottom = 11.0
+texture = ExtResource( 3 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HeartUIFull" type="TextureRect" parent="."]
+visible = false
+margin_right = 45.0
+margin_bottom = 11.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+margin_left = 230.0
+margin_top = 3.224
+margin_right = 800.0
+margin_bottom = 85.224
+rect_scale = Vector2( 0.15, 0.15 )
+max_value = 30.0
+texture_under = SubResource( 1 )
+texture_progress = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="TextureProgress"]
+visible = false
+margin_left = 168.548
+margin_top = 11.9482
+margin_right = 415.548
+margin_bottom = 66.9482
+text = "100%"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

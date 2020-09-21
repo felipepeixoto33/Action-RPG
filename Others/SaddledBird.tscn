@@ -1,0 +1,334 @@
+[gd_scene load_steps=38 format=2]
+
+[ext_resource path="res://Enemies/EnemyStats.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Shadows/LargeShadow.png" type="Texture" id=2]
+[ext_resource path="res://Others/SaddledBird.gd" type="Script" id=3]
+[ext_resource path="res://Others/Textures/BirdWithEffects.png" type="Texture" id=4]
+[ext_resource path="res://Overlap/WanderController.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Effects/EnemyDeathEffect.png" type="Texture" id=7]
+[ext_resource path="res://Overlap/Hurtbox.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Others/Textures/SaddledBirdWithEffects.png" type="Texture" id=9]
+[ext_resource path="res://Others/Textures/MountedBird.png" type="Texture" id=10]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 4 )
+region = Rect2( 240, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 4 )
+region = Rect2( 320, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 4 )
+region = Rect2( 400, 0, 80, 80 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 1 ), null, null, SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=6]
+radius = 6.38627
+height = 18.9157
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 16.7741
+
+[sub_resource type="CircleShape2D" id=8]
+radius = 16.7741
+
+[sub_resource type="CircleShape2D" id=26]
+radius = 4.91884
+
+[sub_resource type="Animation" id=9]
+
+[sub_resource type="Animation" id=10]
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=11]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=27]
+resource_name = "Mounted"
+length = 1.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Hurtbox/wingCollision:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -14.4461, -16.2665 ), Vector2( -14.9444, -13.2918 ), Vector2( 12.3792, 16.8865 ), Vector2( 14.7044, 16.8865 ), Vector2( 5.73584, 15.2256 ), Vector2( -15.3568, -15.6659 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Hurtbox/wingCollision:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -45.0, -50.0, -30.0, -30.0, -30.0, -40.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("MountedSprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=12]
+length = 1.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Hurtbox/wingCollision:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -14.4461, -16.2665 ), Vector2( -14.9444, -13.2918 ), Vector2( 12.3792, 16.8865 ), Vector2( 14.7044, 16.8865 ), Vector2( 5.73584, 15.2256 ), Vector2( -15.3568, -15.6659 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Hurtbox/wingCollision:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -45.0, -50.0, -30.0, -30.0, -30.0, -40.0 ]
+}
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 7 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 7 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 7 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 7 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 7 )
+region = Rect2( 160, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 7 )
+region = Rect2( 192, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 7 )
+region = Rect2( 224, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 7 )
+region = Rect2( 256, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 7 )
+region = Rect2( 288, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=23]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
+"loop": true,
+"name": "DeathEffect",
+"speed": 15.0
+} ]
+
+[sub_resource type="CircleShape2D" id=24]
+radius = 124.638
+
+[sub_resource type="CapsuleShape2D" id=25]
+radius = 9.44122
+height = 11.2711
+
+[node name="EnemyBase" type="KinematicBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 3 )
+
+[node name="ShadowSprite" type="Sprite" parent="."]
+position = Vector2( 0, 44.1323 )
+scale = Vector2( 1.375, 1.4 )
+texture = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+frames = SubResource( 5 )
+playing = true
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 9 )
+hframes = 6
+
+[node name="MountedSprite" type="Sprite" parent="."]
+texture = ExtResource( 10 )
+hframes = 6
+
+[node name="EnemyStats" parent="." instance=ExtResource( 1 )]
+visible = false
+position = Vector2( 0.647079, 16.5002 )
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" parent="EnemyStats" index="0"]
+position = Vector2( -0.894966, 0.596642 )
+rotation = 1.0472
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 44.0191 )
+shape = SubResource( 7 )
+disabled = true
+
+[node name="MountArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MountArea"]
+position = Vector2( 0, 44.0191 )
+shape = SubResource( 8 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="MountArea"]
+shape = SubResource( 26 )
+
+[node name="WanderController" parent="." instance=ExtResource( 5 )]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Death = SubResource( 9 )
+anims/IncencibilityStart = SubResource( 10 )
+anims/InvencibilityEnd = SubResource( 11 )
+anims/Mounted = SubResource( 27 )
+anims/default = SubResource( 12 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="EnemyDeathEffect" type="AnimatedSprite" parent="."]
+frames = SubResource( 23 )
+
+[node name="PlayerDetectionZone" parent="." instance=ExtResource( 6 )]
+visible = false
+
+[node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
+shape = SubResource( 24 )
+
+[node name="Hurtbox" parent="." instance=ExtResource( 8 )]
+position = Vector2( -0.739869, -1.57626 )
+collision_layer = 8
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2( -0.894966, 0.596642 )
+rotation = 1.0472
+shape = SubResource( 6 )
+
+[node name="wingCollision" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2( -14.4461, -16.2665 )
+rotation = -0.785398
+shape = SubResource( 25 )
+
+[node name="moveAwayTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="stopTimer" type="Timer" parent="."]
+
+[node name="mountTimer" type="Timer" parent="."]
+wait_time = 0.5
+[connection signal="deathAnimationCompleted" from="." to="." method="_on_EnemyTest_deathAnimationCompleted"]
+[connection signal="area_entered" from="EnemyStats" to="." method="_on_EnemyStats_area_entered"]
+[connection signal="no_health" from="EnemyStats" to="." method="_on_EnemyStats_no_health"]
+[connection signal="body_entered" from="MountArea" to="." method="_on_MountArea_body_entered"]
+[connection signal="body_entered" from="PlayerDetectionZone" to="." method="_on_PlayerDetectionZone_body_entered"]
+[connection signal="body_exited" from="PlayerDetectionZone" to="." method="_on_PlayerDetectionZone_body_exited"]
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+[connection signal="timeout" from="moveAwayTimer" to="." method="_on_moveAwayTimer_timeout"]
+[connection signal="timeout" from="stopTimer" to="." method="_on_stopTimer_timeout"]
+[connection signal="timeout" from="mountTimer" to="." method="_on_mountTimer_timeout"]
+
+[editable path="EnemyStats"]
+
+[editable path="PlayerDetectionZone"]
+
+[editable path="Hurtbox"]
