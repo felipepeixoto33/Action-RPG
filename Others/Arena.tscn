@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Others/Dungeon.png" type="Texture" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://World/Grass.tscn" type="PackedScene" id=7]
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Enemies/Megnaton.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Enemies/Armored Minotaur.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Enemies/Giant White Kurnas.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -735,3 +737,10 @@ position = Vector2( 296.895, 286.368 )
 
 [node name="Megnaton" parent="YSort/Ysort-Enemies" instance=ExtResource( 9 )]
 position = Vector2( -219.765, 426.025 )
+
+[node name="Giant White Kurnas" parent="." instance=ExtResource( 11 )]
+position = Vector2( 60.243, 126.524 )
+
+[node name="Armored Minotaur" parent="Giant White Kurnas" instance=ExtResource( 10 )]
+position = Vector2( 178.022, 13.5051 )
+dominated = true

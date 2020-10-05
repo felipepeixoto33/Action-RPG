@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Inventory/Item.gd" type="Script" id=1]
+[ext_resource path="res://Items/Armor Sets/Plate Set/Assets/Plate Set4.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "Plate Boots"
+texture = ExtResource( 2 )
+description = ""
+itemType = "Equipament"
+equipmentType = 4
+damage = 0
+damageType = 3
+secondDamageType = 3
+armor = 20
+healPoints = 0
+cure = ""

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Inventory/Item.gd" type="Script" id=1]
+[ext_resource path="res://Textures/ItemsTextures/Coins/coin_01.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "Coin"
+texture = ExtResource( 2 )
+description = "Used to buy things."
+itemType = ""
+equipmentType = 0
+damage = 0
+damageType = 0
+secondDamageType = 0
+armor = 0
+healPoints = 0
+cure = ""

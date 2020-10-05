@@ -6,6 +6,8 @@ signal mounted
 signal unmounted
 signal attacked_by(Monster)
 
+var playerEquipament = preload("res://PlayerEquipment/PlayerEquipament.gd")
+
 var staminaRegen = false;
 var canRoll = true;
 var staminaLoss = 10 #Keep in mind that the player will be losing 2x this each time.
@@ -13,6 +15,8 @@ var staminaGain = 1
 var canLoseStamina = true;
 var canMount = false;
 var mounted = false;
+var showInventory = false;
+var playerReady = false;
 
 const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
 
@@ -32,6 +36,7 @@ var state = MOVE
 var velocity = Vector2(0, 0)
 var roll_vector = Vector2.DOWN
 var stats = PlayerStats
+var armor = 0;
 
 onready var sprite = $Sprite
 onready var animationPlayer = $AnimationPlayer
@@ -41,12 +46,13 @@ onready var swordHitbox = $HitboxPivot/SwordHitbox
 onready var hurtbox = $Hurtbox
 onready var blinkAnimationPlayer = $BlinkAnimationPlayer
 onready var collisionShape2D = $CollisionShape2D
+onready var inventory = $CanvasLayer/InventoryContainer
+onready var playerEquipment = $CanvasLayer/PlayerEquipamentContainer
 
 
 
-
-var inventory_resource = load("res://Player/Inventory.gd")
-var inventory = inventory_resource.new()
+#var inventory_resource = load("res://Player/Inventory.gd")
+#var inventory = inventory_resource.new()
 
 
 
@@ -55,6 +61,7 @@ func _ready():
 	randomize()
 	stats.connect("no_health", self, "queue_free")
 	stats.connect("no_stamina", self, "cannotRoll")
+	playerReady = true
 	
 	animationTree.active = true
 	swordHitbox.knockback_vector = roll_vector
@@ -62,6 +69,12 @@ func _ready():
 	global.player = self
 
 func _physics_process(delta):
+	armor = Player.armor
+	
+	if Input.is_action_just_pressed("activateUI"):
+		showInventory = !showInventory
+		inventory.visible = showInventory
+		playerEquipment.visible = showInventory
 	
 	if(stats.stamina >= 2*staminaLoss):
 		canRoll = true;
@@ -168,7 +181,8 @@ func attack_animation_finished():
 
 
 func _on_Hurtbox_area_entered(area):
-	stats.health -= area.damage
+	stats.health -= area.damage - area.damage * armor/100
+	print(area.damage - area.damage * armor/100)
 	hurtbox.start_invincibility(0.5)
 	hurtbox.create_hit_effect()
 	var playerHurtSound = PlayerHurtSound.instance()
@@ -206,3 +220,7 @@ func _on_SaddledBird_canMount():
 
 func _on_SaddledBird_cannotMount():
 	canMount = false;
+
+
+func _on_Coin_collected(item):
+	inventory._on_collected(item)

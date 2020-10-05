@@ -1,5 +1,6 @@
 extends Node
 
+var armor = 0;
 
 export(int) var max_health = 1 setget set_max_health
 var health = max_health setget set_health

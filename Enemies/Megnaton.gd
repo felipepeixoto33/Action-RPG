@@ -29,8 +29,9 @@ var masterAttacked = false
 
 var isDominatable;
 var isTamable;
-var dominated = false;
-var tamed = false;
+export var dominated = false;
+export var tamed = false;
+
 
 func _on_EnemyStats_area_entered(area):
 	enemyStats.health -= area.damage
@@ -52,11 +53,6 @@ func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
 	knockback = move_and_slide(knockback)
 	
-	if velocity.x == 0:
-		$PlayerDetectionZone/CollisionShape2D.disabled = true
-		print("disabled")
-		$PlayerDetectionZone/CollisionShape2D.disabled = false
-		print("enabled")
 	
 	if(velocity.x < 0):
 		$Sprite.flip_h = false;

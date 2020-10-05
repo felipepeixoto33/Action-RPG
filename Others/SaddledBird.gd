@@ -92,7 +92,8 @@ func _physics_process(delta):
 			resetMountedCollision = false;
 	if (unmounted):
 		if is_instance_valid(self):
-			self.position != get_parent().get_node("YSort/Player").position
+			if is_instance_valid(get_node("YSort/Player")):
+				self.position != get_parent().get_node("YSort/Player").position
 		sprite.visible = true
 		mountedSprite.visible = false
 		animationPlayer.play("default")

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://PlayerEquipment/PlayerEquipament.gd" type="Script" id=1]
+[ext_resource path="res://Items/Armor Sets/Plate Set/Resources/PlateHelmet.tres" type="Resource" id=2]
+[ext_resource path="res://Items/Armor Sets/Plate Set/Resources/PlateLegs.tres" type="Resource" id=3]
+[ext_resource path="res://Items/Armor Sets/Plate Set/Resources/PlateBoots.tres" type="Resource" id=4]
+[ext_resource path="res://Items/Armor Sets/Plate Set/Resources/PlateArmor.tres" type="Resource" id=5]
+
+[resource]
+script = ExtResource( 1 )
+items = [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 4 ), null, null ]

@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://PlayerEquipment/Scenes/PlayerEquipament/LegsSlotDisplay.tscn" type="PackedScene" id=1]
+[ext_resource path="res://PlayerEquipment/Scenes/PlayerEquipament/PlayerEquipamentDisplay.gd" type="Script" id=2]
+[ext_resource path="res://PlayerEquipment/Scenes/PlayerEquipament/HelmetSlotDisplay.tscn" type="PackedScene" id=3]
+[ext_resource path="res://PlayerEquipment/Scenes/PlayerEquipament/ArmorSlotDisplay.tscn" type="PackedScene" id=4]
+[ext_resource path="res://PlayerEquipment/Scenes/PlayerEquipament/ShieldSlotDisplay.tscn" type="PackedScene" id=5]
+[ext_resource path="res://PlayerEquipment/Scenes/PlayerEquipament/BootsSlotDisplay.tscn" type="PackedScene" id=6]
+[ext_resource path="res://PlayerEquipment/Scenes/PlayerEquipament/SwordSlotDisplay.tscn" type="PackedScene" id=7]
+
+[node name="PlayerEquipamentDisplay" type="GridContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+columns = 3
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HelmetSlotDisplay" parent="." instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 104.0
+margin_bottom = 88.0
+
+[node name="ArmorSlotDisplay" parent="." instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 108.0
+margin_right = 212.0
+margin_bottom = 88.0
+
+[node name="LegsSlotDisplay" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 216.0
+margin_right = 320.0
+margin_bottom = 88.0
+
+[node name="BootsSlotDisplay" parent="." instance=ExtResource( 6 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 92.0
+margin_right = 104.0
+margin_bottom = 180.0
+
+[node name="SwordSlotDisplay" parent="." instance=ExtResource( 7 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 108.0
+margin_top = 92.0
+margin_right = 212.0
+margin_bottom = 180.0
+
+[node name="ShieldSlotDisplay" parent="." instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 216.0
+margin_top = 92.0
+margin_right = 320.0
+margin_bottom = 180.0
