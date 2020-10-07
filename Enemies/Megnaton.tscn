@@ -13,80 +13,80 @@
 [ext_resource path="res://Others/Textures/Megnaton Outlined (Mortal Online).png" type="Texture" id=11]
 
 [sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 9 )
-region = Rect2( 2224, 0, 139, 115 )
-
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 9 )
-region = Rect2( 2363, 0, 139, 115 )
-
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 9 )
-region = Rect2( 2502, 0, 139, 115 )
-
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 9 )
-region = Rect2( 2641, 0, 139, 115 )
-
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 9 )
-region = Rect2( 2780, 0, 139, 115 )
-
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 9 )
-region = Rect2( 2919, 0, 139, 115 )
-
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 9 )
-region = Rect2( 3058, 0, 139, 115 )
-
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 9 )
-region = Rect2( 3197, 0, 139, 115 )
-
-[sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 9 )
-region = Rect2( 3336, 0, 139, 115 )
-
-[sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 9 )
-region = Rect2( 3475, 0, 139, 115 )
-
-[sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 1 )
 region = Rect2( 139, 0, 139, 115 )
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
 region = Rect2( 278, 0, 139, 115 )
 
-[sub_resource type="AtlasTexture" id=13]
+[sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 1 )
 region = Rect2( 417, 0, 139, 115 )
 
-[sub_resource type="AtlasTexture" id=14]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 1 )
 region = Rect2( 556, 0, 139, 115 )
 
-[sub_resource type="AtlasTexture" id=15]
+[sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 1 )
 region = Rect2( 695, 0, 139, 115 )
 
-[sub_resource type="AtlasTexture" id=16]
+[sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 1 )
 region = Rect2( 834, 0, 139, 115 )
 
-[sub_resource type="AtlasTexture" id=17]
+[sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 1 )
 region = Rect2( 973, 0, 139, 115 )
 
-[sub_resource type="AtlasTexture" id=18]
+[sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 1 )
 region = Rect2( 1112, 0, 139, 115 )
 
-[sub_resource type="AtlasTexture" id=19]
+[sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 1 )
 region = Rect2( 1251, 0, 139, 115 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 9 )
+region = Rect2( 2224, 0, 139, 115 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 9 )
+region = Rect2( 2363, 0, 139, 115 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 9 )
+region = Rect2( 2502, 0, 139, 115 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 9 )
+region = Rect2( 2641, 0, 139, 115 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 9 )
+region = Rect2( 2780, 0, 139, 115 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 9 )
+region = Rect2( 2919, 0, 139, 115 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 9 )
+region = Rect2( 3058, 0, 139, 115 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 9 )
+region = Rect2( 3197, 0, 139, 115 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 9 )
+region = Rect2( 3336, 0, 139, 115 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 9 )
+region = Rect2( 3475, 0, 139, 115 )
 
 [sub_resource type="AtlasTexture" id=20]
 atlas = ExtResource( 1 )
@@ -102,14 +102,14 @@ region = Rect2( 1946, 0, 139, 115 )
 
 [sub_resource type="SpriteFrames" id=23]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 6.0
-}, {
-"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
 "name": "Attack",
+"speed": 6.0
+}, {
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
+"loop": true,
+"name": "Idle",
 "speed": 6.0
 }, {
 "frames": [ SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
@@ -397,6 +397,7 @@ position = Vector2( 32.6933, -32.0696 )
 scale = Vector2( 2.11224, 2.57634 )
 polygon = PoolVector2Array( -15.668, -12.6638, -5.27178, -9.83718, 1.8245, -2.85562, 1.25679, 3.42778, -2.29134, 7.44218, -9.24571, 10.8166, -14.0002, 4.12594, -9.60052, 1.74057, -8.32319, -4.71737 )
 disabled = true
+[connection signal="attacked" from="." to="Hitbox" method="_on_Megnaton_attacked"]
 [connection signal="deathAnimationCompleted" from="." to="." method="_on_EnemyTest_deathAnimationCompleted"]
 [connection signal="area_entered" from="EnemyStats" to="." method="_on_EnemyStats_area_entered"]
 [connection signal="no_health" from="EnemyStats" to="." method="_on_EnemyStats_no_health"]

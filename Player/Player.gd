@@ -59,7 +59,7 @@ onready var playerEquipment = $CanvasLayer/PlayerEquipamentContainer
 
 func _ready():
 	randomize()
-	stats.connect("no_health", self, "queue_free")
+	stats.connect("no_health", self, "change_scene")
 	stats.connect("no_stamina", self, "cannotRoll")
 	playerReady = true
 	
@@ -224,3 +224,8 @@ func _on_SaddledBird_cannotMount():
 
 func _on_Coin_collected(item):
 	inventory._on_collected(item)
+
+func change_scene():
+	get_tree().change_scene("res://UI/GameOverUI.tscn")
+	self.hide()
+	self.set_physics_process(false)

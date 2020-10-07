@@ -36,6 +36,10 @@ var isTamable;
 export var dominated = false;
 export var tamed = false;
 
+
+func _ready():
+	print($EnemyStats.max_health)
+
 func _on_EnemyStats_area_entered(area):
 	enemyStats.health -= area.damage
 	knockback = area.knockback_vector * 120
@@ -53,6 +57,7 @@ func _on_EnemyStats_no_health():
 	queue_free()
 
 func _physics_process(delta):
+	print("Kurnas = " + str($EnemyStats.max_health))
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
 	knockback = move_and_slide(knockback)
 	

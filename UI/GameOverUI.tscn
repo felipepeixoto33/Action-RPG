@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://UI/Assets/Telas.png" type="Texture" id=1]
+[ext_resource path="res://UI/GameOverUI.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 283, 110, 138.307, 99 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 329, 215, 57, 15 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 329, 234, 57, 14 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 396, 215, 39, 15 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 396, 234, 39, 14 )
+
+[node name="GameOverUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -69.0
+margin_top = -49.0
+margin_right = 69.0
+margin_bottom = 49.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 69.1675, 49.1838 )
+texture = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RestartButton" type="TextureButton" parent="TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -28.5
+margin_top = -8.0
+margin_right = 28.5
+margin_bottom = 8.0
+rect_pivot_offset = Vector2( 29.0558, 6.72793 )
+texture_normal = SubResource( 2 )
+texture_pressed = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" type="TextureButton" parent="TextureRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -19.2775
+margin_top = -32.9387
+margin_right = 19.7225
+margin_bottom = -17.9387
+rect_pivot_offset = Vector2( 19.0558, 6.39461 )
+texture_normal = SubResource( 4 )
+texture_pressed = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

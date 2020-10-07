@@ -33,7 +33,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Action RPG Editado"
-run/main_scene="res://World/Scenes/World.tscn"
+run/main_scene="res://main.tscn"
 config/icon="res://icon.png"
 
 [autoload]

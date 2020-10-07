@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 signal deathAnimationCompleted
+signal attacked(damage);
 
 onready var enemyStats = $EnemyStats
 onready var animatedSprite = $AnimatedSprite
@@ -118,10 +119,6 @@ func _physics_process(delta):
 				move_and_collide(velocity * delta)
 
 
-func _follow_player():
-	pass
-
-
 func _on_PlayerDetectionZone_body_entered(body):
 	if body == get_parent().get_node("YSort/Player"):
 		player = body
@@ -146,8 +143,10 @@ func _on_Hurtbox_area_entered(area):
 	target = area.location
 	print(area.damage)
 
+
 func _on_Hurtbox_invincibility_started():
 	animationPlayer.play("InvencibilityStart")
+
 
 func _on_Hurtbox_invincibility_ended():
 	animationPlayer.play("InvencibilityEnd")
@@ -164,3 +163,7 @@ func _on_stopTimer_timeout():
 func _on_Player_attacked_by(Monster):
 	target = Monster
 	masterAttacked = true
+
+func attack():
+	emit_signal("attacked", 30)
+	animationPlayer.play("Attack")
