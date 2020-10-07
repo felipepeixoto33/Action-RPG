@@ -17,6 +17,7 @@ func set_item(item_index, item):
 		var previousItem = items[item_index]
 		items[item_index] = item
 		emit_signal("items_changed", [item_index])
+		set_armor()
 		return previousItem
 
 func swap_items(item_index, target_item_index):
@@ -25,11 +26,13 @@ func swap_items(item_index, target_item_index):
 	items[target_item_index] = item
 	items[item_index] = targetItem
 	emit_signal("items_changed", [item_index, target_item_index])
+	set_armor()
 
 func remove_item(item_index):
 	var previousItem = items[item_index]
 	items[item_index] = null
 	emit_signal("items_changed", [item_index])
+	set_armor()
 	return previousItem
 
 func make_items_unique():
@@ -43,7 +46,7 @@ func make_items_unique():
 
 func set_armor():
 	armor = 0
-	for i in items.size() - 2:
+	for i in items.size():
 		if(items[i] != null):
 			armor += items[i].armor
 	emit_signal("armor_setted", armor)
