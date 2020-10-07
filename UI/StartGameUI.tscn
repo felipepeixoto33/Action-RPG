@@ -75,3 +75,7 @@ margin_bottom = -17.9387
 rect_pivot_offset = Vector2( 19.0558, 6.39461 )
 texture_normal = SubResource( 4 )
 texture_pressed = SubResource( 5 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 160, 90 )
+current = true
