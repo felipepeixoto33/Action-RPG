@@ -15,8 +15,8 @@ func _ready():
 
 
 func _on_Giant_White_Kurnas_attacked(damage):
-	set_damage(50)
+	set_damage(damage)
 
 
 func _on_Megnaton_attacked(damage):
-	set_damage(30)
+	set_damage(damage)

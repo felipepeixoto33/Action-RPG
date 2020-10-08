@@ -219,12 +219,11 @@ position = Vector2( -236, 270 )
 
 [node name="Giant White Kurnas" parent="." instance=ExtResource( 10 )]
 position = Vector2( 600, 125 )
-dominated = true
 
 [node name="Stone Lizard" parent="." instance=ExtResource( 17 )]
 position = Vector2( -64, 305 )
-[connection signal="attacked_by" from="YSort/Player" to="EnemyTest" method="_on_Player_attacked_by"]
 [connection signal="attacked_by" from="YSort/Player" to="EnemyBase" method="_on_Player_attacked_by"]
+[connection signal="attacked_by" from="YSort/Player" to="EnemyTest" method="_on_Player_attacked_by"]
 [connection signal="mounted" from="YSort/Player" to="SaddledBird" method="_on_Player_mounted"]
 [connection signal="unmounted" from="YSort/Player" to="SaddledBird" method="_on_Player_unmounted"]
 [connection signal="canMount" from="SaddledBird" to="YSort/Player" method="_on_SaddledBird_canMount"]

@@ -1,6 +1,7 @@
 extends Resource
 class_name PlayerEquipament
 
+#var player = preload("res://Player/Player.gd")
 
 var drag_data = null
 var armor = 0;

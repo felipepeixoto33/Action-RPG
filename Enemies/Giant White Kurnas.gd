@@ -57,7 +57,6 @@ func _on_EnemyStats_no_health():
 	queue_free()
 
 func _physics_process(delta):
-	print("Kurnas = " + str($EnemyStats.max_health))
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
 	knockback = move_and_slide(knockback)
 	
@@ -223,6 +222,7 @@ func _attack_drop():
 	$Hitbox/CollisionShape2D.disabled = true
 	$Hitbox/CollisionShape2D2.disabled = true
 	emit_signal("attacked", 70)
+	print("Attack signal emitted = " + str(70))
 
 func _attack_left():
 	animationPlayer.play("AttackLeft", 0, 1)
@@ -234,6 +234,7 @@ func _attack_left():
 	$Hitbox/CollisionShape2D2.disabled = true
 	$Hitbox/CollisionShape2D.disabled = true
 	emit_signal("attacked", 30)
+	print("Attack signal emitted = " + str(30))
 
 
 func _on_attackedTimer_timeout():
