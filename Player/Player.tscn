@@ -863,14 +863,8 @@ stretch_mode = 6
 
 [node name="PlayerEquipamentContainer" parent="CanvasLayer" instance=ExtResource( 13 )]
 visible = false
-anchor_left = 0.0
-anchor_top = -0.012
-anchor_right = 0.0
-anchor_bottom = -0.012
-margin_left = 3.98581
-margin_top = -1.25225
-margin_right = 93.9858
-margin_bottom = 178.748
+margin_left = -136.5
+margin_right = -53.5
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="invincibility_ended" from="Hurtbox" to="." method="_on_Hurtbox_invincibility_ended"]
 [connection signal="invincibility_started" from="Hurtbox" to="." method="_on_Hurtbox_invincibility_started"]

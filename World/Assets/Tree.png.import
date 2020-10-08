@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DesertTile.png-5c762bc81eb3513a93d133ff4e880353.stex"
+path="res://.import/Tree.png-ea5af5779b59a608214e984f830d05e1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/DesertTile.png"
-dest_files=[ "res://.import/DesertTile.png-5c762bc81eb3513a93d133ff4e880353.stex" ]
+source_file="res://World/Assets/Tree.png"
+dest_files=[ "res://.import/Tree.png-ea5af5779b59a608214e984f830d05e1.stex" ]
 
 [params]
 

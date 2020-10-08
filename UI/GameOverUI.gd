@@ -10,8 +10,8 @@ func _physics_process(delta):
 	if(restartButton.pressed):
 		yield(restartButton, "pressed")
 		get_tree().change_scene("res://World/Scenes/World.tscn")
-		Player.set_physics_process(true)
-		Player.hide()
+		self.set_physics_process(true)
+		self.hide()
 		PlayerStats.health = PlayerStats.max_health
 	elif(quitButton.pressed):
 		get_tree().quit()

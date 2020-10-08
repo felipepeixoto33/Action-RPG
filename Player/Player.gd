@@ -69,7 +69,7 @@ func _ready():
 	global.player = self
 
 func _physics_process(delta):
-	armor = Player.armor
+	armor = self.armor
 	
 	if Input.is_action_just_pressed("activateUI"):
 		showInventory = !showInventory

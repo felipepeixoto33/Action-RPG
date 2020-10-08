@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DirtTileset.png-4e52e2a032d2a3147ded644a2054b3ec.stex"
+path="res://.import/House.png-0c8721170b2e0c0245d4df791525b2a9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/DirtTileset.png"
-dest_files=[ "res://.import/DirtTileset.png-4e52e2a032d2a3147ded644a2054b3ec.stex" ]
+source_file="res://World/Assets/House.png"
+dest_files=[ "res://.import/House.png-0c8721170b2e0c0245d4df791525b2a9.stex" ]
 
 [params]
 

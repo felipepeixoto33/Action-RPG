@@ -1,8 +1,6 @@
 extends Resource
 class_name PlayerEquipament
 
-#var player = preload("res://Player/Player.gd")
-
 var drag_data = null
 var armor = 0;
 
@@ -51,5 +49,3 @@ func set_armor():
 		if(items[i] != null):
 			armor += items[i].armor
 	emit_signal("armor_setted", armor)
-	Player.armor = armor
-	print("Player armor = " + str(Player.armor))

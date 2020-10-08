@@ -39,7 +39,6 @@ config/icon="res://icon.png"
 [autoload]
 
 PlayerStats="*res://Player/PlayerStats.tscn"
-Player="*res://Player/Player.tscn"
 global="*res://global.gd"
 PlayerEquipamentScript="*res://PlayerEquipment/PlayerEquipament.gd"
 
