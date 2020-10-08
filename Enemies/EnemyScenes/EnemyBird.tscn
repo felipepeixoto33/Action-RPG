@@ -1,6 +1,6 @@
 [gd_scene load_steps=35 format=2]
 
-[ext_resource path="res://Enemies/EnemyBird.gd" type="Script" id=1]
+[ext_resource path="res://Enemies/EnemyScenes/EnemyBird.gd" type="Script" id=1]
 [ext_resource path="res://Shadows/LargeShadow.png" type="Texture" id=2]
 [ext_resource path="res://Enemies/EnemyStats.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Others/Textures/BirdWithEffects.png" type="Texture" id=4]

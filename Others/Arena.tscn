@@ -4,13 +4,15 @@
 [ext_resource path="res://Others/Dungeon.png" type="Texture" id=2]
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=3]
 [ext_resource path="res://World/CliffTileset.png" type="Texture" id=4]
-[ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Enemies/EnemyScenes/Bat.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World/Grass.tscn" type="PackedScene" id=7]
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Enemies/Megnaton.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Enemies/Armored Minotaur.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Enemies/Giant White Kurnas.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Enemies/EnemyScenes/Megnaton.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Enemies/EnemyScenes/Armored Minotaur.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Enemies/EnemyScenes/Giant White Kurnas.tscn" type="PackedScene" id=11]
+
+
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )

@@ -1,17 +1,20 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://Others/Textures/Giant White Kurnas Walk.png" type="Texture" id=1]
-[ext_resource path="res://Enemies/Armored Minotaur.gd" type="Script" id=2]
+[ext_resource path="res://Enemies/EnemyScenes/Golden Danaburnu.gd" type="Script" id=2]
 [ext_resource path="res://EnemyStats.gd" type="Script" id=3]
 [ext_resource path="res://Shadows/LargeShadow.png" type="Texture" id=4]
 [ext_resource path="res://Overlap/WanderController.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Effects/EnemyDeathEffect.png" type="Texture" id=7]
 [ext_resource path="res://Overlap/Hurtbox.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Others/Textures/ArmoredMino Charge.png" type="Texture" id=9]
+[ext_resource path="res://Others/Textures/GoldenDana Ranged.png" type="Texture" id=9]
 [ext_resource path="res://Overlap/Hitbox.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Others/Textures/ArmoredMino Walk.png" type="Texture" id=11]
-[ext_resource path="res://Others/Textures/ArmoredMino AttackLeft.png" type="Texture" id=12]
+[ext_resource path="res://Others/Textures/GoldenDana Melee.png" type="Texture" id=11]
+[ext_resource path="res://Others/Textures/GoldenDana Walk.png" type="Texture" id=12]
+
+
+
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
@@ -129,7 +132,7 @@ height = 6.21965
 
 [sub_resource type="Animation" id=26]
 resource_name = "Attack"
-length = 4.25
+length = 3.0
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite2:frame")
@@ -138,10 +141,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4, 4.1, 4.2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43 ]
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Hitbox/CollisionShape2D:disabled")
@@ -172,7 +175,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id=27]
 resource_name = "AttackLeft"
-length = 3.0
+length = 4.0
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite3:frame")
@@ -181,10 +184,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 ]
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Hitbox/CollisionShape2D2:disabled")
@@ -252,8 +255,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=32]
 resource_name = "Walk"
-length = 2.1
-loop = true
+length = 4.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -261,10 +263,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ]
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40 ]
 }
 
 [sub_resource type="AtlasTexture" id=33]
@@ -315,19 +317,22 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=42]
 radius = 180.947
 
-[sub_resource type="CapsuleShape2D" id=44]
-radius = 13.0
-height = 28.0
+[sub_resource type="CircleShape2D" id=45]
+radius = 117.017
 
-[node name="Armored Minotaur" type="KinematicBody2D" groups=[
+[sub_resource type="CapsuleShape2D" id=44]
+radius = 29.0
+height = 52.0
+
+[node name="Golden Danaburnu" type="KinematicBody2D" groups=[
 "Enemies",
 ]]
 collision_layer = 17
 script = ExtResource( 2 )
 
 [node name="ShadowSprite" type="Sprite" parent="."]
-position = Vector2( 5, 6 )
-scale = Vector2( 1.14063, 1.1875 )
+position = Vector2( 0, -2 )
+scale = Vector2( 5, 2.95 )
 texture = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -339,26 +344,23 @@ flip_h = true
 
 [node name="Sprite" type="Sprite" parent="."]
 visible = false
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 offset = Vector2( 0, -20 )
-hframes = 21
-frame = 2
+hframes = 41
+frame = 40
 
 [node name="Sprite2" type="Sprite" parent="."]
-scale = Vector2( 0.5, 0.5 )
+visible = false
 texture = ExtResource( 9 )
 offset = Vector2( 0, -20 )
-hframes = 44
-frame = 27
+hframes = 31
+frame = 30
 
 [node name="Sprite3" type="Sprite" parent="."]
-visible = false
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 offset = Vector2( 6, -20 )
-hframes = 31
-frame = 14
+hframes = 41
+frame = 40
 
 [node name="EnemyStats" type="Area2D" parent="."]
 visible = false
@@ -366,7 +368,7 @@ position = Vector2( 0.647079, 16.5002 )
 collision_layer = 8
 collision_mask = 0
 script = ExtResource( 3 )
-max_health = 50
+max_health = 100
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyStats"]
 shape = SubResource( 24 )
@@ -405,7 +407,6 @@ visible = false
 shape = SubResource( 42 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 8 )]
-visible = false
 position = Vector2( 0.647079, 16.1767 )
 collision_layer = 8
 
@@ -427,13 +428,17 @@ collision_layer = 4
 damage = 15
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
-position = Vector2( 25, -11 )
-shape = SubResource( 44 )
+position = Vector2( 0, -10 )
+rotation = 1.5708
+shape = SubResource( 45 )
 disabled = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2( 25, -11 )
+position = Vector2( 29, -12 )
+rotation = 1.5708
 shape = SubResource( 44 )
+disabled = true
+[connection signal="attacked" from="." to="Hitbox" method="_on_Golden_Danaburnu_attacked"]
 [connection signal="deathAnimationCompleted" from="." to="." method="_on_EnemyTest_deathAnimationCompleted"]
 [connection signal="area_entered" from="EnemyStats" to="." method="_on_EnemyStats_area_entered"]
 [connection signal="no_health" from="EnemyStats" to="." method="_on_EnemyStats_no_health"]

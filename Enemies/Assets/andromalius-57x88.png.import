@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/9RPGenemies.PNG-d747cab1193f9864b1602bd8f39c2f47.stex"
+path="res://.import/andromalius-57x88.png-fbbe28c83ff9ca116fd21a3b93ce2f37.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/9RPGenemies.PNG"
-dest_files=[ "res://.import/9RPGenemies.PNG-d747cab1193f9864b1602bd8f39c2f47.stex" ]
+source_file="res://Enemies/Assets/andromalius-57x88.png"
+dest_files=[ "res://.import/andromalius-57x88.png-fbbe28c83ff9ca116fd21a3b93ce2f37.stex" ]
 
 [params]
 

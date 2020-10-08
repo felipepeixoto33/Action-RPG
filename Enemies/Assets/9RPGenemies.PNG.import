@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/disciple-45x51.png-f7485b4f2122b07079964c6d2ef80027.stex"
+path="res://.import/9RPGenemies.PNG-f66631e9ddae9d7b667a70c97a3de6b7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/disciple-45x51.png"
-dest_files=[ "res://.import/disciple-45x51.png-f7485b4f2122b07079964c6d2ef80027.stex" ]
+source_file="res://Enemies/Assets/9RPGenemies.PNG"
+dest_files=[ "res://.import/9RPGenemies.PNG-f66631e9ddae9d7b667a70c97a3de6b7.stex" ]
 
 [params]
 

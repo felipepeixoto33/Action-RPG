@@ -11,6 +11,7 @@
 [ext_resource path="res://Others/Textures/SaddledBirdWithEffects.png" type="Texture" id=9]
 [ext_resource path="res://Others/Textures/MountedBird.png" type="Texture" id=10]
 
+
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 80, 80 )

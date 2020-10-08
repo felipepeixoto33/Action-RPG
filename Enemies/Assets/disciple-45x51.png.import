@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/erodaxia summary.png-78a5c2236070e5a304146e3d6f35961c.stex"
+path="res://.import/disciple-45x51.png-6f50cf240812840dba73cb992fbb8f20.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/erodaxia summary.png"
-dest_files=[ "res://.import/erodaxia summary.png-78a5c2236070e5a304146e3d6f35961c.stex" ]
+source_file="res://Enemies/Assets/disciple-45x51.png"
+dest_files=[ "res://.import/disciple-45x51.png-6f50cf240812840dba73cb992fbb8f20.stex" ]
 
 [params]
 

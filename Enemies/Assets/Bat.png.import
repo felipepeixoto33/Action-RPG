@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/andromalius-57x88.png-9c0ffe6a941031f73ab5e598d44f855c.stex"
+path="res://.import/Bat.png-39be21c864a8f0aaa7f4ce3ae592419a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/andromalius-57x88.png"
-dest_files=[ "res://.import/andromalius-57x88.png-9c0ffe6a941031f73ab5e598d44f855c.stex" ]
+source_file="res://Enemies/Assets/Bat.png"
+dest_files=[ "res://.import/Bat.png-39be21c864a8f0aaa7f4ce3ae592419a.stex" ]
 
 [params]
 

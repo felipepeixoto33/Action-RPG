@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bat.png-38405154cd5b8ff1c5e2fcf1cef1c3e6.stex"
+path="res://.import/erodaxia summary.png-569f124bf82b0b75c1405221441d84a0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Bat.png"
-dest_files=[ "res://.import/Bat.png-38405154cd5b8ff1c5e2fcf1cef1c3e6.stex" ]
+source_file="res://Enemies/Assets/erodaxia summary.png"
+dest_files=[ "res://.import/erodaxia summary.png-569f124bf82b0b75c1405221441d84a0.stex" ]
 
 [params]
 

@@ -7,16 +7,16 @@
 [ext_resource path="res://World/DesertTile.png" type="Texture" id=5]
 [ext_resource path="res://World/House.png" type="Texture" id=6]
 [ext_resource path="res://World/Grass.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Enemies/Megnaton.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Enemies/EnemyScenes/Megnaton.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Enemies/Enemy Base/EnemyBase.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Enemies/Giant White Kurnas.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Enemies/EnemyBird.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Enemies/EnemyScenes/Giant White Kurnas.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Enemies/EnemyScenes/EnemyBird.tscn" type="PackedScene" id=11]
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=12]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Others/SaddledBird.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Enemies/Stone Lizard.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Enemies/EnemyScenes/Bat.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Enemies/EnemyScenes/Stone Lizard.tscn" type="PackedScene" id=17]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DesertTile.png 0"
@@ -222,8 +222,8 @@ position = Vector2( 600, 125 )
 
 [node name="Stone Lizard" parent="." instance=ExtResource( 17 )]
 position = Vector2( -64, 305 )
-[connection signal="attacked_by" from="YSort/Player" to="EnemyBase" method="_on_Player_attacked_by"]
 [connection signal="attacked_by" from="YSort/Player" to="EnemyTest" method="_on_Player_attacked_by"]
+[connection signal="attacked_by" from="YSort/Player" to="EnemyBase" method="_on_Player_attacked_by"]
 [connection signal="mounted" from="YSort/Player" to="SaddledBird" method="_on_Player_mounted"]
 [connection signal="unmounted" from="YSort/Player" to="SaddledBird" method="_on_Player_unmounted"]
 [connection signal="canMount" from="SaddledBird" to="YSort/Player" method="_on_SaddledBird_canMount"]
