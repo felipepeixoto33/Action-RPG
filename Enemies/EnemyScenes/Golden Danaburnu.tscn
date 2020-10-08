@@ -13,9 +13,6 @@
 [ext_resource path="res://Others/Textures/GoldenDana Melee.png" type="Texture" id=11]
 [ext_resource path="res://Others/Textures/GoldenDana Walk.png" type="Texture" id=12]
 
-
-
-
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 150, 150 )
@@ -153,7 +150,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1.5, 2.6 ),
+"times": PoolRealArray( 0, 1.5, 2.3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ true, false, true ]
@@ -317,7 +314,7 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=42]
 radius = 180.947
 
-[sub_resource type="CircleShape2D" id=45]
+[sub_resource type="CircleShape2D" id=43]
 radius = 117.017
 
 [sub_resource type="CapsuleShape2D" id=44]
@@ -354,7 +351,7 @@ visible = false
 texture = ExtResource( 9 )
 offset = Vector2( 0, -20 )
 hframes = 31
-frame = 30
+frame = 1
 
 [node name="Sprite3" type="Sprite" parent="."]
 texture = ExtResource( 11 )
@@ -368,7 +365,7 @@ position = Vector2( 0.647079, 16.5002 )
 collision_layer = 8
 collision_mask = 0
 script = ExtResource( 3 )
-max_health = 100
+max_health = 20
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyStats"]
 shape = SubResource( 24 )
@@ -425,12 +422,11 @@ wait_time = 0.2
 
 [node name="Hitbox" parent="." instance=ExtResource( 10 )]
 collision_layer = 4
-damage = 15
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
 position = Vector2( 0, -10 )
 rotation = 1.5708
-shape = SubResource( 45 )
+shape = SubResource( 43 )
 disabled = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hitbox"]

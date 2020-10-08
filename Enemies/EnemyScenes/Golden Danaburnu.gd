@@ -3,6 +3,7 @@ extends KinematicBody2D
 signal deathAnimationCompleted
 signal _attack_completed
 signal attacked(damage);
+signal killed
 
 onready var enemyStats = $EnemyStats
 onready var animatedSprite = $AnimatedSprite
@@ -33,7 +34,7 @@ var random = 1;
 
 var isDominatable;
 var isTamable;
-export var dominated = true;
+export var dominated = false;
 export var tamed = false;
 
 func _on_EnemyStats_area_entered(area):
@@ -45,6 +46,7 @@ func _on_EnemyStats_area_entered(area):
 
 
 func _on_EnemyStats_no_health():
+	emit_signal("killed")
 	$Sprite.visible = false
 	$ShadowSprite.visible = false
 	$Sprite3.visible = false;
@@ -198,6 +200,7 @@ func _random_attack():
 
 
 func _attack_drop():
+	emit_signal("attacked", 5/2);
 	animationPlayer.play("Attack", 0, 0.5)
 	$Sprite.visible = false;
 	$Sprite2.visible = true;
@@ -206,10 +209,10 @@ func _attack_drop():
 	$attackedTimer.start()
 	$Hitbox/CollisionShape2D.disabled = true
 	$Hitbox/CollisionShape2D2.disabled = true
-	emit_signal("attacked", 5);
 
 
 func _attack_left():
+	emit_signal("attacked", 10/2)
 	animationPlayer.play("AttackLeft", 0, 1)
 	$Sprite.visible = false;
 	$Sprite2.visible = false;
@@ -218,7 +221,6 @@ func _attack_left():
 	$attackedTimer.start()
 	$Hitbox/CollisionShape2D2.disabled = true
 	$Hitbox/CollisionShape2D.disabled = true
-	emit_signal("attacked", 10)
 
 
 func _on_attackedTimer_timeout():

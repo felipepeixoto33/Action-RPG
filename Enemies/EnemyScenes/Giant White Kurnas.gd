@@ -3,6 +3,7 @@ extends KinematicBody2D
 signal deathAnimationCompleted
 signal _attack_completed
 signal attacked(damage)
+signal killed
 
 onready var enemyStats = $EnemyStats
 onready var animatedSprite = $AnimatedSprite
@@ -54,6 +55,7 @@ func _on_EnemyStats_no_health():
 	$Sprite3.visible = false;
 	enemyDeathEffect.play("DeathEffect")
 	yield(enemyDeathEffect, "animation_finished")
+	emit_signal("killed")
 	queue_free()
 
 func _physics_process(delta):
@@ -213,6 +215,7 @@ func _random_attack():
 
 
 func _attack_drop():
+	emit_signal("attacked", 70)
 	animationPlayer.play("Attack", 0, 1)
 	$Sprite.visible = false;
 	$Sprite2.visible = true;
@@ -221,10 +224,10 @@ func _attack_drop():
 	$attackedTimer.start()
 	$Hitbox/CollisionShape2D.disabled = true
 	$Hitbox/CollisionShape2D2.disabled = true
-	emit_signal("attacked", 70)
 	print("Attack signal emitted = " + str(70))
 
 func _attack_left():
+	emit_signal("attacked", 30)
 	animationPlayer.play("AttackLeft", 0, 1)
 	$Sprite.visible = false;
 	$Sprite2.visible = false;
@@ -233,7 +236,6 @@ func _attack_left():
 	$attackedTimer.start()
 	$Hitbox/CollisionShape2D2.disabled = true
 	$Hitbox/CollisionShape2D.disabled = true
-	emit_signal("attacked", 30)
 	print("Attack signal emitted = " + str(30))
 
 

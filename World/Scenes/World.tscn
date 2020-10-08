@@ -1,10 +1,10 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://World/Tilemaps/DirtCliffTileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Tilemaps/DirtPathTileMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/Scenes/Background.tscn" type="PackedScene" id=3]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=4]
-[ext_resource path="res://World/Assets/DesertTile.png" type="Texture" id=5]
+[ext_resource path="res://World/Tilemaps/DesertTiles.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World/Assets/House.png" type="Texture" id=6]
 [ext_resource path="res://World/ObjectScenes/Grass.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Enemies/EnemyScenes/Megnaton.tscn" type="PackedScene" id=8]
@@ -18,26 +18,10 @@
 [ext_resource path="res://Enemies/EnemyScenes/Bat.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Enemies/EnemyScenes/Stone Lizard.tscn" type="PackedScene" id=17]
 
-[sub_resource type="TileSet" id=1]
-0/name = "DesertTile.png 0"
-0/texture = ExtResource( 5 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 32, 32 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 44, 34 )
 
-[sub_resource type="GDScript" id=3]
+[sub_resource type="GDScript" id=2]
 script/source = "extends GridContainer
 "
 
@@ -45,10 +29,7 @@ script/source = "extends GridContainer
 
 [node name="Background" parent="." instance=ExtResource( 3 )]
 
-[node name="DesertTiles" type="TileMap" parent="."]
-tile_set = SubResource( 1 )
-cell_size = Vector2( 32, 32 )
-format = 1
+[node name="DesertTiles" parent="." instance=ExtResource( 5 )]
 
 [node name="DirtPathTileMap" parent="." instance=ExtResource( 2 )]
 
@@ -164,7 +145,7 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Buildings/Houses"]
 position = Vector2( 21.1551, -16.0124 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -185,7 +166,7 @@ margin_left = 10.0
 margin_top = 10.0
 margin_right = -10.0
 margin_bottom = -10.0
-script = SubResource( 3 )
+script = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

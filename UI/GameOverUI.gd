@@ -8,8 +8,7 @@ onready var quitButton = $TextureRect/QuitButton
 
 func _physics_process(delta):
 	if(restartButton.pressed):
-		yield(restartButton, "pressed")
-		get_tree().change_scene("res://World/Scenes/World.tscn")
+		get_tree().change_scene("res://World/Scenes/EPR.tscn")
 		self.set_physics_process(true)
 		self.hide()
 		PlayerStats.health = PlayerStats.max_health

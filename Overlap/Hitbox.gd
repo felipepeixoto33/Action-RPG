@@ -20,3 +20,7 @@ func _on_Giant_White_Kurnas_attacked(damage):
 
 func _on_Megnaton_attacked(damage):
 	set_damage(damage)
+
+
+func _on_Golden_Danaburnu_attacked(damage):
+	set_damage(damage)

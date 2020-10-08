@@ -8,6 +8,6 @@ onready var quitButton = $TextureRect/QuitButton
 
 func _physics_process(delta):
 	if(playButton.pressed):
-		get_tree().change_scene("res://World/Scenes/World.tscn")
+		get_tree().change_scene("res://World/Scenes/EPR.tscn")
 	elif(quitButton.pressed):
 		get_tree().quit()
